@@ -1,0 +1,261 @@
+/******** GLOBAL STYLES ********/
+/* mcm - Set the base text size so can use ems and rems */
+html {
+	font-size: 16px;
+}
+
+/* mcm - Change font-size to .9em for the body code block */
+body {
+	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+	font-size: .9em;
+	color: #000000;
+}
+
+/* The width property has been changed to max-width */
+/* mcm - Add width, display, justify, flex-flow - */
+/*     - Remove margin and overflow */
+.content-wrapper {
+	max-width: 1200px;
+	width: 90%;
+	display: flex;
+	justify-content: center;
+	flex-flow: row wrap;
+	
+}
+
+h1,
+h2,
+h3,
+h4 {
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+/* mcm - Change from px to em */
+/*     - Add font size rem for paragraph */
+h1 {
+	font-size: 1.875em;
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
+h3 {
+	font-size: 1.25em;
+}
+
+h4 {
+	font-size: .75em;
+}
+
+p {
+	font-size: 1rem;
+	line-height: 36px;
+}
+
+/******** HEADER STYLES ********/
+/* The widths are in a percentage! */
+/* mcm - Remove main header height + margin and replace with display, justify, text-align */
+header {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	
+}
+
+/* mcm - Remove header h1 float and add border + width */
+header h1 {
+	margin: 0;
+	padding: 38px 0 20px 0;
+	border-bottom: 3px solid #77a466;
+	width: 100%;
+		
+}
+
+header h1 span {
+	color: #45610E;
+}
+
+/* mcm - Remove header nav float and change padding to 20 px */
+header nav {
+	padding: 20px 0;
+}
+
+/* mcm - Add margin, padding, and list-style to nav ul */
+header nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* mcm - Remove display, add width + add rem to font-size for nav ul li */
+header nav ul li {
+	font-size: .875rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 10px 0;
+	width: 100%;
+}
+
+header nav ul li a {
+	text-decoration: none;
+	color: #45610E;
+}
+
+/********  MAIN STYLES ********/
+/******** TOP SECTION ********/
+/* The widths are in a percentage! */
+.main-image img {
+	width: 100%;
+	border-top: 3px solid #77A466;
+	border-bottom: 3px solid #77a466;
+}
+
+
+.main-title h2 {
+	color: #45610E;
+	padding: 5px 0;
+}
+
+/******** BOTTOM SECTION ********/
+/* mcm - Add display and justify to bottom-section */
+.top-section,
+.bottom-section {
+	display: flex;
+	justify-content: center;
+
+}
+
+.bottom-section .content-wrapper {
+	border-top: 5px solid #EEE;
+	border-bottom: 5px solid #EEE;
+}
+
+/* mcm - Remove float and padding in section-three */
+.section-one,
+.section-two,
+.section-three {
+	box-sizing: border-box;
+}
+
+/* mcm - Change width to 100% in section-one */
+.section-one {
+/* 	width: 29%; */	
+	width: 100%;
+}
+
+/* mcm - Change width to 100% and change border-left/right to border top/bottom for section-two */
+.section-two {
+/* 	width: 42%; */
+	width: 100%;
+	border-top: 5px solid #EEE;
+	border-bottom: 5px solid #EEE;
+}
+
+/* mcm - Change width to 100% for section-three */
+.section-three {
+/* 	width: 29%; */
+	width: 100%;
+}
+
+.bottom-section h3 {
+	margin: 30px 0;
+}
+
+.menu-list {
+	padding-left: 0;
+	list-style: none;
+}
+
+/* mcm - Change font-size to rem for menu-list li */
+.menu-list li {
+	color: #45610E;
+	font-size: 1rem;
+	line-height: 36px;
+}
+
+/******** FOOTER STYLES ********/
+/* The widths are in a percentage! */
+/* mcm - Remove text-align and add display-flex + justify-content for footer */
+footer {
+	margin-top: 8px;
+	display: flex;
+	justify-content: center;
+}
+
+/* mcm - Change font-size to rem for footer span */
+footer span {
+	font-family: 'Galada', cursive;
+	text-transform: lowercase;
+	color: #45610E;
+	font-size: .875rem;
+}
+
+/* mcm - Add a media query section to enable size changes on tables vs desktops */
+
+/******** MEDIA QUERY FOR TABLETS ********/
+@media all and (min-width: 768px) {
+
+	/******** BOTTOM SECTION ********/
+	/******** Using existing mobile styles as template ********/
+	/******** Space the columns evenly using justify-content/space-evenly  ********/
+	.bottom-section .content-wrapper {
+		justify-content: space-evenly;
+	}
+
+	.section-one {
+		width: 26%;
+	}
+
+	
+	/******** Add vertical borders and padding ********/
+	.section-two {
+		width: 40%;
+		border-left: 5px solid #EEE;
+		border-right: 5px solid #EEE;
+		border-top: none;
+		border-bottom: none;
+		padding: 0 30px;
+	}
+
+	.section-three {
+		width: 26%;
+	}
+}
+
+/******** DESKTOP MEDIA QUERY ********/
+@media all and (min-width: 1200px) {
+
+	/******** GLOBAL STYLES ********/
+	/******** Using existing mobile styles as template ********/
+	/******** Change font size to 1em ********/
+	body {
+		font-size: 1em;
+	}
+
+	/******** Change header styles so h1 and nav sit side-by-side and add justify-content to adj space between elements ********/
+	header .content-wrapper {
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px 0;
+	}
+
+	header h1 {
+		width: 30%;
+		padding: 0;
+		border-bottom: none;
+		text-align: left;
+	}
+
+	header nav {
+		width: 21%;
+	}
+
+	/******** Header nav ul becomes flex parent by adding the FLEX rule display ********/
+	header nav ul {
+		display: flex;
+		justify-content: space-between;
+	}
+
+}
